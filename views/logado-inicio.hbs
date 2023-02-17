@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <base href="/logado-inicio">
+    <title>Angular Messenger</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel='stylesheet' href='/stylesheets/style.css'/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<h1> Pagina do LOGADO-INICIO</h1> 
+<div class="alert alert-success fade in">
+  <strong>Sucesso!</strong> Voce conseguiu logar no seu ambiente. <br>
+  <!-- Recebe Usuario do POST -->
+  Seja muito bem vindo {{user}}
+</div> 
+
+<a href="/login-inicio">clique aqui para voltar a pagina de login</a>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#myModal").modal("show");
+    });  
+</script>
+
+<div class="modal fade" id="myModal" role="dialog" align="center">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Area de Trabalho</h4>
+        </div>
+        <div class="modal-body">
+            <!-- Recebe Usuario do POST -->
+            <h3>Seja muito bem vindo {{user}}</h3>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/js/app/bundle.js"></script>
+</body>
+</html> 
